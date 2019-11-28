@@ -7,7 +7,6 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.customfield.CustomField;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Image;
-import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -22,11 +21,11 @@ public class MainLayout extends Composite<Div> implements RouterLayout {
     private Div content = new Div();
 
     private final HorizontalLayout headerDiv = new HorizontalLayout(
-    new Image("img/header.png", "image of the order app"),
-    new RouterLink("Items", ItemsPage.class),
-    new RouterLink("Nav #2", HomePage.class),
-    new RouterLink("Nav #3", CustomerPage.class),
-    new RouterLink("Nav #4", BasketPage.class));
+            new Image("img/header.png", "image of the order app"),
+            new RouterLink("HomePage", HomePage.class),
+            new RouterLink("Items", ItemsPage.class),
+            new RouterLink("Customer", CustomerPage.class),
+            new RouterLink("Basket", BasketPage.class));
 
 
     private final HorizontalLayout footerDiv = new HorizontalLayout(
