@@ -10,7 +10,10 @@ import org.jboss.jandex.Main;
 public class BasketPage extends Composite<VerticalLayout> {
 
     public BasketPage() {
-        getContent().add(new Span("BASKET PAGE"));
+
+        Span basket_page = new Span("BASKET PAGE");
+        basket_page.setHeight("600px");
+        getContent().add(basket_page);
 
     }
 }

@@ -39,8 +39,8 @@ public class MainLayout extends Composite<Div> implements RouterLayout {
     );
 
     public MainLayout() {
-        headerDiv.setAlignItems(FlexComponent.Alignment.CENTER);   ///not working, i would like to have the image centered
-        content.setHeight("450px");
+        content.setSizeFull();
+        layout.setAlignItems(FlexComponent.Alignment.CENTER);
         getContent().add(layout);
     }
 

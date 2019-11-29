@@ -9,12 +9,13 @@ import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Route(value = "index", layout = MainLayout.class)
+
 public class HomePage extends VerticalLayout {
     private ItemService itemService;
 
 
     @Autowired
-    public HomePage(){
+    public HomePage() {
 
         Span welcome = new Span("Welcome message");
         welcome.setText("Welcome to Order Application");

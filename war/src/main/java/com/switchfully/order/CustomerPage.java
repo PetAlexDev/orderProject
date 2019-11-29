@@ -11,6 +11,7 @@ public class CustomerPage extends Composite<VerticalLayout> {
 
     public CustomerPage() {
         Span span = new Span("CUSTOMER PAGE");
+        span.setHeight("600px");
         getContent().add(span);
     }
 

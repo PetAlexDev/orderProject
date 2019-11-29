@@ -24,7 +24,9 @@ public class Item extends BaseEntity {
     @Column(name = "AMOUNT_OF_STOCK")
     private int amountOfStock;
 
-    /** JPA requires a no-arg constructor */
+    /**
+     * JPA requires a no-arg constructor
+     */
     private Item() {
         name = null;
         description = null;
@@ -57,8 +59,12 @@ public class Item extends BaseEntity {
     }
 
     public StockUrgency getStockUrgency() {
-        if(amountOfStock < 5) { return StockUrgency.STOCK_LOW; }
-        if (amountOfStock < 10) { return StockUrgency.STOCK_MEDIUM; }
+        if (amountOfStock < 5) {
+            return StockUrgency.STOCK_LOW;
+        }
+        if (amountOfStock < 10) {
+            return StockUrgency.STOCK_MEDIUM;
+        }
         return StockUrgency.STOCK_HIGH;
     }
 
@@ -74,7 +80,7 @@ public class Item extends BaseEntity {
     }
 
     public void decrementStock(int amountToDecrement) {
-        if(amountToDecrement > amountOfStock) {
+        if (amountToDecrement > amountOfStock) {
             throw new IllegalArgumentException("Decrementing the stock amount of an item " + getId().toString()
                     + " below 0 is not allowed");
         }
